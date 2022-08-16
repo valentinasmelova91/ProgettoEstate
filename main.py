@@ -167,7 +167,7 @@ def main_body():
     #logging_name = f"log_{now_log}.txt"
     logging.basicConfig(filename=log_file)
     application = app()
-    #application.import_observations()
+    application.import_observations()
     application.import_forecasts()
 
 
