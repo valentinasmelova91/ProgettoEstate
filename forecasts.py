@@ -6,6 +6,8 @@ import numpy as np
 import datetime
 import pytz
 import meteomatics.api as mmapi
+import os
+
 
 
 #Forecasts from FMI (Finnish Meteorological Institute)

@@ -11,6 +11,19 @@ import time
 oldpwd = os.getcwd()
 
 
+#Check if a folder "Forecasts" exists in the root directory, if not - create
+if not os.path.isdir('Forecasts'):
+    os.mkdir('Forecasts')
+else:
+    pass
+
+#Check if a folder "Observations" exists in the root directory, if not - create
+if not os.path.isdir('Observations'):
+    os.mkdir('Observations')
+else:
+    pass
+
+
 class app():
 #____________________________________GET ALL BBOXES______________________________________
 #Method get_bbox helps to get an array of all bboxes listed in bbox_list.csv

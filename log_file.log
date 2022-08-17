@@ -201,3 +201,12 @@ ERROR:root:2022-08-16 18:29:52.652078: Forecast for MID_C1136 of Aeris observati
 ERROR:root:2022-08-16 20:28:29.751185: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
 ERROR:root:2022-08-16 20:28:29.800300: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
 ERROR:root:2022-08-16 20:28:51.279217: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-16 23:01:05.089487: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-16 23:01:05.129375: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-16 23:01:27.343247: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-17 02:01:03.877423: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-17 02:01:03.923799: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-17 02:01:26.633117: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-17 05:01:03.040915: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-17 05:01:03.079642: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-17 05:01:25.097973: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
