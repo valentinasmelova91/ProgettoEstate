@@ -260,22 +260,6 @@ class fmi_observations:
 
 
 
-#fmi_observations = fmi_observations('2022-07-23T01:00:00Z','2022-07-24T20:00:00Z','24.544329,24.544329,25.285425,24.544329')
-#datetime_test = dt.datetime(2022, 7, 23, 1, 40)
-#print(fmi_observations.get_observations() )
-#or time in fmi_observations.get_data().data.keys():
-#    for station in fmi_observations.get_data().data[time].keys():
-#        print(fmi_observations.get_data().data[time][station]['Air temperature']['value'])
-#aeris_observations = Aeris_observations('24.544329,60.326145,25.285425,60.126988','2022/07/23','100')
-#list_metrics = 'all'
-#print(aeris_observations.get_observations(list_metrics))
-
-
-
-#aeris_observations = Aeris_observations("59.373294,17.811224,59.239389,18.324532",'2022/08/08','100')
-#metrics = ['humidity', 'tempC', 'windDirDEG', 'windSpeedKPH','precipMM']
-#print(aeris_observations.get_observations(metrics).columns)
-#'precipMM'
 
 
 

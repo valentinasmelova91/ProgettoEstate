@@ -348,33 +348,4 @@ class Meteomatics_forecast:
         return dataframe
 
 
-#startdate_1 = datetime.datetime.utcnow()
-#enddate = startdate_1 + datetime.timedelta(days=3)
-#meteomatics_forecast = Meteomatics_forecast([(60, 20)])
-#print(meteomatics_forecast.get_data(['t_2m:C','relative_humidity_2m:p','wind_dir_10m:d','wind_speed_10m:ms']))
-#meteomatics_forecast_dataframe = meteomatics_forecast.get_forecast(['t_2m:C','relative_humidity_2m:p','wind_dir_10m:d','wind_speed_10m:ms'])
 
-
-#print(meteomatics_forecast_dataframe)
-#weather_channel_forecast = weather_channel_forecast(60.196998596191,24.590000152588)
-
-#print(weather_channel_forecast.get_forecasts(['relativeHumidity', 'temperature', 'validTimeUtc', 'windDirection', 'windSpeed'])['temperature'])
-#yr_forecasts = yr_forecasts(60.196998596191,24.590000152588)
-#print(yr_forecasts.get_forecasts(['air_temperature', 'relative_humidity', 'wind_from_direction', 'wind_speed']))
-
-
-#accuweather_forecast = Accuweather_forecast(24.590000152588,60.196998596191)
-#print(accuweather_forecast.get_forecasts(['Temperature','Wind', 'RelativeHumidity','PrecipitationProbability','TotalLiquid','HasPrecipitation'])['metric_name'].unique())
-#print(accuweather_forecast.get_data()[0].keys())
-#fmi_forecasts = fmi_forecasts(60.223500,24.986330)
-#fmi_forecasts.export_forecasts()
-#print(fmi_forecasts.get_forecasts())
-
-#yr_forecasts = yr_forecasts(60.196998596191,24.590000152588)
-#print(yr_forecasts.get_forecasts(['air_temperature', 'relative_humidity',
-#                                  'wind_from_direction', 'wind_speed',
-#                                  'precipitation_amount', 'probability_of_precipitation']))
-
-
-#aeris = aeris_forecasts(60, 20, 100)
-#print(aeris.get_data()['response'][0]['periods'][0].keys())

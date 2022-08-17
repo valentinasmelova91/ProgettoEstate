@@ -8,9 +8,7 @@ class ground_truth_locations:
     def export_locations_from_obs(self):
         os.chdir(os.getcwd())
         os.chdir(os.getcwd() + '\Observations')
-        #os.chdir(os.getcwd())
         locations = pd.DataFrame()
-        #os.chdir(os.getcwd())
         path_of_the_directory = os.getcwd()
         for filename in os.listdir(path_of_the_directory):
             f = os.path.join(filename)
@@ -33,10 +31,9 @@ class ground_truth_locations:
         obs_locations = self.export_locations_from_obs()
         manual_locations = self.export_coordinates()
         all_locations = pd.concat([obs_locations, manual_locations]).reset_index(drop=True)
-        return all_locations.iloc[:1]
+        return all_locations
 
 
-    #.iloc[:1]
 
 
 

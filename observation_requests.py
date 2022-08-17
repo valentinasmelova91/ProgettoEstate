@@ -1,16 +1,5 @@
-import datetime as dt
-import pandas as pd
-import pytz
 from stations_observations import *
 import logging
-
-
-#logging.debug('This message is skipped as a level is set as INFO')
-#logging.info('So should this')
-#logging.warning('And this, too')
-#logging.error('Testing non-ASCII character, Ø and ö')
-
-
 
 
 
@@ -88,20 +77,7 @@ class Aeris_Observations:
 
 
 
-#aeris = Aeris_Observations()
-#fresh_observations_aeris = aeris.export_observations([[59.373294,17.811224,59.239389,18.324532]])
-#print(fresh_observations_aeris)
 
-
-"""
-
-fmi = Observations_FMI()
-fresh_observations_fmi = fmi.export_observations([[60.570482, 21.824370,59.847263, 22.966586],[60.326145,24.544329,60.126988,25.285425]])
-
-"""
-#aeris = Aeris_Observations()
-#fresh_stations_aeris = aeris.export_stations([[60.570482, 21.824370,59.847263, 22.966586],[60.326145,24.544329,60.126988,25.285425]])
-#print(fresh_stations_aeris)
 
 
 

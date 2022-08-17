@@ -168,6 +168,4 @@ class Meteomatics:
                                                       'validdate': 'datetime'})
         return new_forecasts
 
-#meteomatics_forecast = Meteomatics()
-#meteomatics_new_forecast = meteomatics_forecast.export_forecasts(locations_list)
-#print(meteomatics_new_forecast['datetime'].unique())
+
