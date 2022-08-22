@@ -7,6 +7,8 @@ import logging
 from logging.handlers import TimedRotatingFileHandler
 import schedule
 import time
+import sqlite3 as sl
+import pandas as pd
 
 oldpwd = os.getcwd()
 
@@ -41,6 +43,21 @@ class app():
         return bbox_list
 
 #____________________________________GET OBSERVATIONS______________________________________
+#____________________________________Get max avaiable date with an observations per station id and the source
+    def get_max_observation_date(self):
+        con = sl.connect('observations.db')
+        try:
+            max_date = pd.read_sql('''
+            SELECT id, source, max(datetime) as max_datetime
+            FROM OBSERVATIONS
+            GROUP BY id, source
+            ''', con)
+        except sl.OperationalError:
+            max_date = pd.DataFrame
+        max_date['max_datetime'] = pd.to_datetime(max_date['max_datetime'])
+        return max_date
+
+
 #Method import_observations allows to export past observations for all listed bboxes from FMI and Aeris services
 
     def import_observations(self):
@@ -48,15 +65,22 @@ class app():
 # FMI Observations
         fmi = Observations_FMI()
         fresh_observations_fmi = fmi.export_observations(bbox_list)
-        os.chdir(os.getcwd() + '\Observations')
-        try:
-            old_observations_fmi = pd.read_csv('fmi_observations_full.csv')
-            old_observations_fmi['datetime'] = pd.to_datetime(old_observations_fmi['datetime'])
-        except:
-            old_observations_fmi = pd.DataFrame()
-        combined_observations_fmi = pd.concat([old_observations_fmi, fresh_observations_fmi]).drop_duplicates()
-        combined_observations_fmi.to_csv('fmi_observations_full.csv', index=False)
-        os.chdir(oldpwd)
+        #os.chdir(os.getcwd() + '\Observations')
+        #try:
+        #    old_observations_fmi = pd.read_csv('fmi_observations_full.csv')
+        #    old_observations_fmi['datetime'] = pd.to_datetime(old_observations_fmi['datetime'])
+        #except:
+        #    old_observations_fmi = pd.DataFrame()
+        fresh_observations_fmi = fresh_observations_fmi.merge(self.get_max_observation_date(),
+                                                              on=['id','source'], how='left')
+        fresh_observations_fmi_new = fresh_observations_fmi[(fresh_observations_fmi['datetime']>fresh_observations_fmi['max_datetime'])|(fresh_observations_fmi['max_datetime'].isna())]
+
+        #combined_observations_fmi = pd.concat([old_observations_fmi, fresh_observations_fmi]).drop_duplicates()
+        #combined_observations_fmi.to_csv('fmi_observations_full.csv', index=False)
+        #os.chdir(oldpwd)
+        con = sl.connect('observations.db')
+        fresh_observations_fmi_new = fresh_observations_fmi_new.drop('max_datetime', axis=1)
+        fresh_observations_fmi_new.to_sql('OBSERVATIONS', con, if_exists='append')
         fmi.export_stations()
 
 # Aeris Observations
@@ -185,13 +209,13 @@ def main_body():
 
 
 
-schedule.every(3).hours.at(":01").do(main_body)
-while True:
-    schedule.run_pending()
-    time.sleep(1)
+#schedule.every(3).hours.at(":01").do(main_body)
+#while True:
+#    schedule.run_pending()
+#    time.sleep(1)
 
 
-#main_body()
+main_body()
 
 
 
