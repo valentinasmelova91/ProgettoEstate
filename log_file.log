@@ -210,3 +210,185 @@ ERROR:root:2022-08-17 02:01:26.633117: Forecast for MID_C1136 of Aeris observati
 ERROR:root:2022-08-17 05:01:03.040915: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
 ERROR:root:2022-08-17 05:01:03.079642: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
 ERROR:root:2022-08-17 05:01:25.097973: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:52:33.267026: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-18 20:52:33.309482: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-18 20:53:26.851214: Forecast for LFOH of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-18 20:53:26.972470: Forecast for MID_E6240 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-18 20:53:27.155771: Forecast for MID_E8226 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-18 20:53:27.270738: Forecast for MID_G1111 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-18 20:53:30.666047: Forecast for Singapore Zoo of manual observation source was not loaded from FMI
+ERROR:root:2022-08-18 20:53:30.843785: Forecast for Kaikoura of manual observation source was not loaded from FMI
+ERROR:root:2022-08-18 20:54:01.407118: Forecast for 101009.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:01.625489: Forecast for 103943.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:01.854516: Forecast for 151028.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:02.066580: Forecast for 852678.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:02.314607: Forecast for 874863.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:02.525376: Forecast for Emäsalo bridge of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:02.735794: Forecast for Singapore Zoo of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:02.978805: Forecast for Kaikoura of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-18 20:54:35.974606: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:36.160543: Forecast for MID_D1410 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:36.316812: Forecast for MID_D2380 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:36.469094: Forecast for MID_D8228 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:36.649673: Forecast for MID_AS468 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:36.831791: Forecast for MID_AV970 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:36.994609: Forecast for MID_E7395 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:37.121050: Forecast for PWS_BASSEDV1 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:37.257130: Forecast for EFHK of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:37.420432: Forecast for LFOH of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:37.608108: Forecast for MID_E6240 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:37.785527: Forecast for MID_E8226 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:37.951527: Forecast for MID_G1111 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:38.107676: Forecast for ESSB of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:38.299789: Forecast for PWS_JNSSON of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:38.468061: Forecast for PWS_LOBECO of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:38.642163: Forecast for PWS_SEGELTORPCENTRAL of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:38.822124: Forecast for MID_C6238 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:38.990175: Forecast for 100934.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:39.164395: Forecast for 100945.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:39.338020: Forecast for 100947.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:39.481703: Forecast for 100949.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:39.652905: Forecast for 100951.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:39.822503: Forecast for 101065.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:39.988500: Forecast for 100971.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:40.155571: Forecast for 101004.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:40.358552: Forecast for 101009.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:40.530568: Forecast for 103943.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:40.714534: Forecast for 151028.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:40.906014: Forecast for 852678.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:41.095332: Forecast for 874863.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:41.262856: Forecast for Emäsalo bridge of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:41.437930: Forecast for Singapore Zoo of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-18 20:54:41.606791: Forecast for Kaikoura of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-19 13:38:57.028829: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-19 13:38:57.186134: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-19 13:40:26.485424: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-19 13:40:26.645324: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-19 13:41:19.301143: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-19 13:41:19.453034: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-19 13:43:34.594060: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-19 13:43:34.696511: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-22 06:03:56.856389: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-22 06:03:56.904708: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-22 06:04:48.242024: Forecast for LFOH of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-22 06:04:48.382601: Forecast for MID_E6240 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-22 06:04:48.547800: Forecast for MID_E8226 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-22 06:04:48.734525: Forecast for MID_G1111 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-22 06:04:52.364532: Forecast for Singapore Zoo of manual observation source was not loaded from FMI
+ERROR:root:2022-08-22 06:04:52.512626: Forecast for Kaikoura of manual observation source was not loaded from FMI
+ERROR:root:2022-08-22 06:05:20.451634: Forecast for 101009.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:05:20.666916: Forecast for 103943.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:05:20.882130: Forecast for 151028.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:05:21.097246: Forecast for 852678.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:05:21.314499: Forecast for 874863.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:05:21.548129: Forecast for Emäsalo bridge of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:05:21.760560: Forecast for Singapore Zoo of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:05:22.087440: Forecast for Kaikoura of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-22 06:06:04.001903: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:04.171816: Forecast for MID_D1410 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:04.341506: Forecast for MID_D2380 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:04.542937: Forecast for MID_D8228 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:04.729680: Forecast for MID_AS468 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:04.909648: Forecast for MID_AV970 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:05.051189: Forecast for MID_E7395 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:05.187307: Forecast for PWS_BASSEDV1 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:05.354151: Forecast for EFHK of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:05.543048: Forecast for LFOH of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:05.717747: Forecast for MID_E6240 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:05.865756: Forecast for MID_E8226 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:06.041598: Forecast for MID_G1111 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:06.218630: Forecast for ESSB of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:06.383691: Forecast for PWS_JNSSON of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:06.541489: Forecast for PWS_LOBECO of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:06.722030: Forecast for PWS_SEGELTORPCENTRAL of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:06.870814: Forecast for MID_C6238 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:07.026434: Forecast for PWS_CHICHAK of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:07.201163: Forecast for 100934.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:07.386257: Forecast for 100945.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:07.542772: Forecast for 100947.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:07.727162: Forecast for 100949.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:07.897479: Forecast for 100951.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:08.092754: Forecast for 101065.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:08.272559: Forecast for 100971.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:08.457814: Forecast for 101004.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:08.618074: Forecast for 101009.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:08.795630: Forecast for 103943.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:08.977428: Forecast for 151028.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:09.128797: Forecast for 852678.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:09.341760: Forecast for 874863.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:09.501559: Forecast for Emäsalo bridge of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:09.698967: Forecast for Singapore Zoo of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-22 06:06:09.861126: Forecast for Kaikoura of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:41:02.128442: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 06:41:02.163878: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 06:41:52.596056: Forecast for LFOH of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-23 06:41:53.052179: Forecast for MID_E6240 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-23 06:41:53.239217: Forecast for MID_E8226 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-23 06:41:53.400381: Forecast for MID_G1111 of Aeris observation source was not loaded from FMI
+ERROR:root:2022-08-23 06:41:57.354512: Forecast for Singapore Zoo of manual observation source was not loaded from FMI
+ERROR:root:2022-08-23 06:41:57.492634: Forecast for Kaikoura of manual observation source was not loaded from FMI
+ERROR:root:2022-08-23 06:42:24.065738: Forecast for 101009.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:24.276326: Forecast for 103943.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:24.505251: Forecast for 151028.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:24.719774: Forecast for 852678.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:24.993564: Forecast for 874863.0 of FMI observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:25.196688: Forecast for Emäsalo bridge of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:25.433341: Forecast for Singapore Zoo of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:25.685494: Forecast for Kaikoura of manual observation source was not loaded from Accuweather
+ERROR:root:2022-08-23 06:42:57.668087: Forecast for MID_C1136 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:57.833636: Forecast for MID_D1410 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:58.004733: Forecast for MID_D2380 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:58.147571: Forecast for MID_D8228 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:58.307807: Forecast for MID_AS468 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:58.452429: Forecast for MID_AV970 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:58.588566: Forecast for MID_E7395 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:58.725647: Forecast for PWS_BASSEDV1 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:58.887893: Forecast for EFHK of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:59.009926: Forecast for LFOH of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:59.158390: Forecast for MID_E6240 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:59.352638: Forecast for MID_E8226 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:59.505223: Forecast for MID_G1111 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:59.655979: Forecast for ESSB of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:59.797728: Forecast for PWS_JNSSON of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:42:59.923921: Forecast for PWS_LOBECO of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:00.104633: Forecast for PWS_SEGELTORPCENTRAL of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:00.228375: Forecast for MID_C6238 of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:00.347941: Forecast for PWS_CHICHAK of Aeris observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:00.512728: Forecast for 100934.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:00.670507: Forecast for 100945.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:00.789924: Forecast for 100947.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:00.917404: Forecast for 100949.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:01.059474: Forecast for 100951.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:01.201333: Forecast for 101065.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:01.340683: Forecast for 100971.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:01.483227: Forecast for 101004.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:01.629957: Forecast for 101009.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:01.912378: Forecast for 103943.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:02.040216: Forecast for 151028.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:02.191564: Forecast for 852678.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:02.336932: Forecast for 874863.0 of FMI observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:02.450665: Forecast for Emäsalo bridge of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:02.592116: Forecast for Singapore Zoo of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:43:02.759039: Forecast for Kaikoura of manual observation source was not loaded from Meteomatics
+ERROR:root:2022-08-23 06:48:53.575739: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 06:48:53.620539: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 06:51:26.571803: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 06:51:26.624051: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 06:53:59.600445: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 06:53:59.624953: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 06:55:38.379918: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 06:55:38.444122: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 06:57:33.206373: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 06:57:33.253402: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 06:58:36.623585: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 06:58:36.665434: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 07:09:22.267343: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 07:09:22.295905: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 07:17:05.661114: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 07:17:05.709183: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 07:19:15.631459: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 07:19:15.670708: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 07:19:59.167477: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 07:19:59.333419: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.
+ERROR:root:2022-08-23 07:21:28.991492: Observations for [49.703541, -0.039065, 49.357709, 1.30676] were not loaded from FMI.
+ERROR:root:2022-08-23 07:21:29.030839: Observations for [59.373294, 17.811224, 59.239389, 18.324532] were not loaded from FMI.

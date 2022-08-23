@@ -24,6 +24,7 @@ class Observations_FMI:
                 logging.error(f'{dt.datetime.utcnow()}: Observations for {bbox} were not loaded from FMI.')
         return new_observations
 
+
     def export_stations(self):
         stations_fmi = Stations_fmi()
         stations_fmi.export_stations()

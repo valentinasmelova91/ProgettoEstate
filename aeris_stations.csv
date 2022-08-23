@@ -15,6 +15,8 @@ ESSB,Europe/Stockholm,"(59.35, 17.933333333333)","{'name': 'stockholm/bromma', '
 PWS_JNSSON,Europe/Stockholm,"(59.344605, 17.8939377)","{'name': 'bromma', 'city': 'bromma', 'state': '', 'country': 'se'}",PWS
 PWS_LOBECO,Europe/Stockholm,"(59.27301, 17.93273)","{'name': 'segeltorp', 'city': 'segeltorp', 'state': '', 'country': 'se'}",PWS
 PWS_SEGELTORPCENTRAL,Europe/Stockholm,"(59.28, 17.94)","{'name': 'segeltorp', 'city': 'segeltorp', 'state': '', 'country': 'se'}",PWS
+MID_C6238,Europe/Stockholm,"(59.273166656494, 17.932832717896)","{'name': 'segeltorp', 'city': 'segeltorp', 'state': '', 'country': 'se'}",MADIS_MESONET2
+PWS_CHICHAK,Europe/Stockholm,"(59.26433, 18.00463)","{'name': 'stockholm', 'city': 'stockholm', 'state': '', 'country': 'se'}",PWS
 MID_C1136,Europe/Helsinki,"(60.189670562744, 21.897169113159)","{'name': 'nagu', 'city': 'nagu', 'state': '', 'country': 'fi'}",MADIS_MESONET2
 MID_D1410,Europe/Helsinki,"(60.47367, 22.69283)","{'name': 'paimio', 'city': 'paimio', 'state': '', 'country': 'fi'}",MADIS_MESONET2
 MID_D2380,Europe/Helsinki,"(60.46383, 22.6735)","{'name': 'paimio', 'city': 'paimio', 'state': '', 'country': 'fi'}",MADIS_MESONET2
@@ -27,7 +29,7 @@ MID_E6240,Europe/Paris,"(49.698, 0.737)","{'name': 'anvéville', 'city': 'anvév
 MID_E8226,Europe/Paris,"(49.44283, 1.094)","{'name': 'rouen', 'city': 'rouen', 'state': 'a7', 'country': 'fr'}",MADIS_MESONET2
 MID_G1111,Europe/Paris,"(49.70299911499, 1.0950000286102)","{'name': 'saint-denis-sur-scie', 'city': 'saint-denis-sur-scie', 'state': '', 'country': 'fr'}",MADIS_MESONET2
 LFOH,Europe/Paris,"(49.516666666667, 0.066666666666667)","{'name': 'le havre/octevil', 'city': 'le havre/octevil', 'state': '', 'country': 'fr'}",METAR_NOAA
+MID_C6238,Europe/Stockholm,"(59.273166656494, 17.932832717896)","{'name': 'segeltorp', 'city': 'segeltorp', 'state': '', 'country': 'se'}",MADIS_MESONET2
+PWS_CHICHAK,Europe/Stockholm,"(59.26433, 18.00463)","{'name': 'stockholm', 'city': 'stockholm', 'state': '', 'country': 'se'}",PWS
 ESSB,Europe/Stockholm,"(59.35, 17.933333333333)","{'name': 'stockholm/bromma', 'city': 'stockholm/bromma', 'state': '', 'country': 'se'}",METAR_NOAA
 PWS_JNSSON,Europe/Stockholm,"(59.344605, 17.8939377)","{'name': 'bromma', 'city': 'bromma', 'state': '', 'country': 'se'}",PWS
-PWS_LOBECO,Europe/Stockholm,"(59.27301, 17.93273)","{'name': 'segeltorp', 'city': 'segeltorp', 'state': '', 'country': 'se'}",PWS
-PWS_SEGELTORPCENTRAL,Europe/Stockholm,"(59.28, 17.94)","{'name': 'segeltorp', 'city': 'segeltorp', 'state': '', 'country': 'se'}",PWS

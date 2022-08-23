@@ -238,7 +238,7 @@ id,name,location,properties,source
 101942,Sodankylä Heikinheimo-masto,"(67.362466, 26.638342)","{'locationcode/name': 'Sodankylä Heikinheimo-masto', 'locationcode/geoid': '-16000127', 'locationcode/wmo': '02742', 'location/region': 'Sodankylä', 'location/country': 'Finland'}",FMI
 101947,Pelkosenniemi kirkonkylä,"(67.10025, 27.50995)","{'locationcode/name': 'Pelkosenniemi kirkonkylä', 'locationcode/geoid': '-101947', 'location/region': 'Pelkosenniemi', 'location/country': 'Finland'}",FMI
 101950,Kemijärvi lentokenttä,"(66.715557, 27.159063)","{'locationcode/name': 'Kemijärvi lentokenttä', 'locationcode/geoid': '-16000143', 'locationcode/wmo': '02814', 'location/region': 'Kemijärvi', 'location/country': 'Finland'}",FMI
-101952,Savukoski kirkonkylä,"(67.286111, 28.176912)","{'locationcode/name': 'Savukoski kirkonkylä', 'locationcode/geoid': '-16000029', 'locationcode/wmo': '02815', 'location/region': 'Savukoski', 'location/country': 'Finland'}",FMI
+101952,Savukoski kirkonkylä,"(67.282955, 28.178596)","{'locationcode/name': 'Savukoski kirkonkylä', 'locationcode/geoid': '-16000029', 'locationcode/wmo': '02815', 'location/region': 'Savukoski', 'location/country': 'Finland'}",FMI
 101956,Salla Kelloselkä,"(66.944351, 28.976929)","{'locationcode/name': 'Salla Kelloselkä', 'locationcode/geoid': '-101956', 'location/region': 'Salla', 'location/country': 'Finland'}",FMI
 101958,Pelkosenniemi Pyhätunturi,"(67.02204, 27.2184)","{'locationcode/name': 'Pelkosenniemi Pyhätunturi', 'locationcode/geoid': '-16000095', 'locationcode/wmo': '02705', 'location/region': 'Pelkosenniemi', 'location/country': 'Finland'}",FMI
 101959,Salla kirkonkylä,"(66.816596, 28.688292)","{'locationcode/name': 'Salla kirkonkylä', 'locationcode/geoid': '-16000102', 'locationcode/wmo': '02849', 'location/region': 'Salla', 'location/country': 'Finland'}",FMI
@@ -416,6 +416,7 @@ id,name,location,properties,source
 107542,Siilinjärvi Ranta,"(63.11134, 27.76019)","{'locationcode/name': 'Siilinjärvi Ranta', 'locationcode/geoid': '-107542', 'location/region': 'Siilinjärvi', 'location/country': 'Finland'}",FMI
 107543,Lohja Moisio,"(60.25294, 24.07861)","{'locationcode/name': 'Lohja Moisio', 'locationcode/geoid': '-107543', 'location/region': 'Lohja', 'location/country': 'Finland'}",FMI
 107563,Lappeenranta Ihalainen 2,"(61.03879, 28.17635)","{'locationcode/name': 'Lappeenranta Ihalainen 2', 'locationcode/geoid': '-107563', 'location/region': 'Lappeenranta', 'location/country': 'Finland'}",FMI
+107569,Turku Kauppatori 2,"(60.45183, 22.26783)","{'locationcode/name': 'Turku Kauppatori 2', 'locationcode/geoid': '-107569', 'location/region': 'Turku', 'location/country': 'Finland'}",FMI
 126736,Kajaani Petäisenniska,"(64.216775, 27.751937)","{'locationcode/name': 'Kajaani Petäisenniska', 'locationcode/geoid': '-10022731', 'locationcode/wmo': '02883', 'location/region': 'Kajaani', 'location/country': 'Finland'}",FMI
 126737,Utsjoki Kevo Kevojärvi,"(69.757, 27.012)","{'locationcode/name': 'Utsjoki Kevo Kevojärvi', 'locationcode/geoid': '-16011866', 'locationcode/wmo': '02890', 'location/region': 'Utsjoki', 'location/country': 'Finland'}",FMI
 129963,Inari Seitalaassa,"(69.048514, 27.756794)","{'locationcode/name': 'Inari Seitalaassa', 'locationcode/geoid': '-16011881', 'locationcode/wmo': '02888', 'location/region': 'Inari', 'location/country': 'Finland'}",FMI

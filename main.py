@@ -1,5 +1,4 @@
 from observation_requests import *
-from forecast_requests import *
 from locations import *
 import os
 import datetime
@@ -78,24 +77,33 @@ class app():
         #combined_observations_fmi = pd.concat([old_observations_fmi, fresh_observations_fmi]).drop_duplicates()
         #combined_observations_fmi.to_csv('fmi_observations_full.csv', index=False)
         #os.chdir(oldpwd)
-        con = sl.connect('observations.db')
+        con_fmi = sl.connect('observations_fmi.db')
         fresh_observations_fmi_new = fresh_observations_fmi_new.drop('max_datetime', axis=1)
-        fresh_observations_fmi_new.to_sql('OBSERVATIONS', con, if_exists='append')
+        fresh_observations_fmi_new.to_sql('OBSERVATIONS', con_fmi, if_exists='append')
         fmi.export_stations()
 
+
 # Aeris Observations
-        os.chdir(os.getcwd() + '\Observations')
+        #os.chdir(os.getcwd() + '\Observations')
         aeris = Aeris_Observations()
         fresh_observations_aeris = aeris.export_observations(bbox_list)
         fresh_stations_aeris = aeris.export_stations(bbox_list)
-        try:
-            old_observations_aeris = pd.read_csv('aeris_observations_full.csv')
-            old_observations_aeris['datetime'] = pd.to_datetime(old_observations_aeris['datetime'])
-        except:
-            old_observations_aeris = pd.DataFrame()
-        combined_observations_aeris = pd.concat([old_observations_aeris, fresh_observations_aeris]).drop_duplicates()
-        combined_observations_aeris.to_csv('aeris_observations_full.csv', index=False)
-        os.chdir(oldpwd)
+        #try:
+        #    old_observations_aeris = pd.read_csv('aeris_observations_full.csv')
+        #    old_observations_aeris['datetime'] = pd.to_datetime(old_observations_aeris['datetime'])
+        #except:
+        #    old_observations_aeris = pd.DataFrame()
+        max_date_obs = self.get_max_observation_date()
+        max_date_obs['id'] = max_date_obs['id'].astype(str)
+        fresh_observations_aeris = fresh_observations_aeris.merge(max_date_obs,
+                                                                  on=['id', 'source'], how='left')
+        fresh_observations_aeris_new = fresh_observations_aeris[(fresh_observations_aeris['datetime'] > fresh_observations_aeris['max_datetime']) | (fresh_observations_aeris['max_datetime'].isna())]
+        con_aeris = sl.connect('observations_aeris.db')
+        fresh_observations_aeris_new = fresh_observations_aeris_new.drop('max_datetime', axis=1)
+        fresh_observations_aeris_new.to_sql('OBSERVATIONS', con_aeris, if_exists='append')
+        #combined_observations_aeris = pd.concat([old_observations_aeris, fresh_observations_aeris]).drop_duplicates()
+        #combined_observations_aeris.to_csv('aeris_observations_full.csv', index=False)
+        #os.chdir(oldpwd)
         try:
             old_stations_aeris = pd.read_csv('aeris_stations.csv')
         except:
@@ -104,84 +112,17 @@ class app():
         combined_stations_aeris['properties'] = combined_stations_aeris['properties'].astype(str)
         combined_stations_aeris = combined_stations_aeris.drop_duplicates(subset=None, keep="first", inplace=False)
         combined_stations_aeris.to_csv('aeris_stations.csv', index=False)
-
-
-
-#_______________________________GET FORECASTS_____________________________________________
-#Method import_forecasts allows to export available future forecasts for all
-#coordinates available in the past saved observations from all the sources
-    def import_forecasts(self):
-        #first we load the array of all ground truth coordinates
-        oldpwd = os.getcwd()
-        os.chdir(oldpwd)
-        ground_truth_locations_list = ground_truth_locations()
-        locations_list = ground_truth_locations_list.export_locations()
-
-        #AERIS FORECAST
+        """
         try:
-            aeris_forecast = Forecasts_Aeris()
-            aeris_new_forecast = aeris_forecast.export_forecasts(locations_list)
-            os.chdir(oldpwd)
-            os.chdir(os.getcwd() + '\Forecasts')
-            now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-            aeris_new_forecast.to_csv(f'aeris_new_forecasts_full{now}.csv', index=False)
+            old_stations_aeris = pd.read_sql('SELECT * FROM STATIONS', con_aeris)
+            combined_stations_aeris = pd.concat([old_stations_aeris, fresh_stations_aeris])
+            combined_stations_aeris['properties'] = combined_stations_aeris['properties'].astype(str)
+            combined_stations_aeris = combined_stations_aeris.drop_duplicates(subset=None, keep="first", inplace=False)
+            combined_stations_aeris.to_sql(name='STATIONS', con=con_aeris, if_exists='replace', index=False)
         except:
-            print("Aeris Forecast was not reloaded")
+            fresh_stations_aeris.to_sql(name='STATIONS', con=con_aeris, if_exists='replace', index=False)
+        """
 
-        #FMI FORECAST
-        try:
-            fmi_forecast = Forecasts_FMI()
-            fmi_new_forecast = fmi_forecast.export_forecasts(locations_list)
-            os.chdir(oldpwd)
-            os.chdir(os.getcwd() + '\Forecasts')
-            now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-            fmi_new_forecast.to_csv(f'fmi_new_forecasts_full{now}.csv', index=False)
-        except:
-            print("FMI Forecast was not reloaded")
-
-        #YR FORECAST
-        try:
-            yr_forecast = Forecasts_YR()
-            yr_new_forecast = yr_forecast.export_forecasts(locations_list)
-            os.chdir(oldpwd)
-            os.chdir(os.getcwd() + '\Forecasts')
-            now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-            yr_new_forecast.to_csv(f'yr_new_forecasts_full{now}.csv', index=False)
-        except:
-            print("YR Forecast was not reloaded")
-
-        #ACCUWEATHER FORECAST
-        try:
-            accuweather_forecast = Forecasts_Accuweather()
-            accuweather_new_forecast = accuweather_forecast.export_forecasts(locations_list)
-            os.chdir(oldpwd)
-            os.chdir(os.getcwd() + '\Forecasts')
-            now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-            accuweather_new_forecast.to_csv(f'accuweather_new_forecasts_full{now}.csv', index=False)
-        except:
-            print("Accuweather Forecast was not reloaded")
-
-        #THE WEATHER CHANNEL FORECAST
-        try:
-            the_weather_channel_forecast = Forecasts_Weather_Channel()
-            the_weather_channel_new_forecast = the_weather_channel_forecast.export_forecasts(locations_list)
-            os.chdir(oldpwd)
-            os.chdir(os.getcwd() + '\Forecasts')
-            now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-            the_weather_channel_new_forecast.to_csv(f'weather_channel_new_forecasts_full{now}.csv', index=False)
-        except:
-            print("The Weather Channel forecast was not reloaded")
-
-        #METEOMATICS FORECAST
-        try:
-            meteomatics = Meteomatics()
-            meteomatics_new_forecast = meteomatics.export_forecasts(locations_list)
-            os.chdir(oldpwd)
-            os.chdir(os.getcwd() + '\Forecasts')
-            now = datetime.datetime.utcnow().strftime("%Y%m%d%H%M%S")
-            meteomatics_new_forecast.to_csv(f'meteomatics_new_forecasts_full{now}.csv', index=False)
-        except:
-            print("Meteomatics forecast was not reloaded")
 
 
 def create_timed_rotating_log(path):
@@ -205,17 +146,17 @@ def main_body():
     logging.basicConfig(filename=log_file)
     application = app()
     application.import_observations()
-    application.import_forecasts()
 
 
 
-#schedule.every(3).hours.at(":01").do(main_body)
-#while True:
-#    schedule.run_pending()
-#    time.sleep(1)
+
+schedule.every(3).hours.at(":01").do(main_body)
+while True:
+    schedule.run_pending()
+    time.sleep(1)
 
 
-main_body()
+#main_body()
 
 
 
