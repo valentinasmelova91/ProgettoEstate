@@ -1,0 +1,9 @@
+DateTime~=4.5
+schedule~=1.1.0
+pandas~=1.4.3
+requests~=2.28.1
+numpy~=1.23.1
+pytz~=2022.1
+meteomatics~=2.8.1
+seaborn~=0.11.2
+fmiopendata~=0.3.4
