@@ -3,6 +3,7 @@ from forecasts import fmi_forecasts, aeris_forecasts, yr_forecasts, Accuweather_
 import logging
 import datetime as dt
 
+
 #get Aeris Forecasts for multiple coordinates and adjust the layout
 class Forecasts_Aeris:
 
@@ -143,9 +144,38 @@ class Forecasts_Weather_Channel:
 #get Meteomatics Forecasts for multiple coordinates and adjust the layout
 class Meteomatics:
 
+    #def create_list(column):
+    #    coordinate_list = []
+    #    it = iter(column)
+    #    zip(it, it)
+    #    return it
+
     def export_forecasts(self, locations_list):
+        def chunker(seq, size):
+            return (seq[pos:pos + size] for pos in range(0, len(seq), size))
+
         new_forecasts = pd.DataFrame()
         metrics = ['t_2m:C', 'relative_humidity_2m:p', 'wind_dir_10m:d', 'wind_speed_10m:ms','precip_1h:mm']
+
+        locations_list['latlon'] = list(zip(locations_list['lat'], locations_list['lon']))
+        for chunk in chunker(locations_list, 10):
+            point_list = list(chunk['latlon'])
+            id_list = list(chunk['id'])
+            source_list = list(chunk['source'])
+            meteomatics_forecast = Meteomatics_forecast(coordinates=point_list)
+            try:
+                fc = meteomatics_forecast.get_data(metrics)
+                new_forecasts = pd.concat((new_forecasts, fc))
+            except:
+                logging.error(
+                    f'{dt.datetime.utcnow()}: Forecast for some of {id_list} from {source_list} observation source was not loaded from Meteomatics')
+        new_forecasts = new_forecasts.merge(locations_list[['lat', 'lon', 'id','source']], on=['lat', 'lon'], how='left')
+        new_forecasts = new_forecasts.rename(columns={'t_2m:C': "temp_2", 'relative_humidity_2m:p': "rhum_2",
+                                                      'wind_speed_10m:ms': "winds_10", 'wind_dir_10m:d': "windd_10",
+                                                      'validdate': 'datetime'})
+        return new_forecasts
+
+"""
         for index, row in locations_list.iterrows():
             lon = locations_list.loc[index, 'lon']
             lat = locations_list.loc[index, 'lat']
@@ -169,3 +199,4 @@ class Meteomatics:
         return new_forecasts
 
 
+"""

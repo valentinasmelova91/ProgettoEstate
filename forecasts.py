@@ -90,10 +90,11 @@ class aeris_forecasts:
             #'timestamp', 'validTime', 'dateTimeISO' - these time stamps must be excluded from the metric list
         else:
             metrics = input_metrics
-        periods = self.get_data()['response'][0]['periods']
-        lat = self.get_data()['response'][0]['loc']['lat']
-        long = self.get_data()['response'][0]['loc']['long']
-        tz = self.get_data()['response'][0]['profile']['tz']
+        response = self.get_data()
+        periods = response['response'][0]['periods']
+        lat = response['response'][0]['loc']['lat']
+        long = response['response'][0]['loc']['long']
+        tz = response['response'][0]['profile']['tz']
         for period in periods:
             fc_long_i = []
             fc_lat_i = []
@@ -294,7 +295,7 @@ class Accuweather_forecast:
                         fc_metric_name_i.append(metric)
                     except:
                         pass
-                elif metric in ['Temperature','TotalLiquid']:
+                elif metric in ['Temperature']:
                     try:
                         fc_metric_value_i.append(round((float(datapoint[metric]['Value']) - 32)*5/9,1))
                         fc_period_i.append(datetime.datetime.fromisoformat(datapoint['DateTime']).astimezone(pytz.utc))

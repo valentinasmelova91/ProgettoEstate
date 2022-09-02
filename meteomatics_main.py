@@ -62,7 +62,6 @@ def main_body():
     application.import_forecasts()
 
 
-
 schedule.every(3).hours.at(":01").do(main_body)
 while True:
     schedule.run_pending()
