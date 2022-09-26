@@ -7,3 +7,4 @@ pytz~=2022.1
 meteomatics~=2.8.1
 seaborn~=0.11.2
 fmiopendata~=0.3.4
+PyJWT~=2.5.0
