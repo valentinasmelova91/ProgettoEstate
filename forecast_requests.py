@@ -1,5 +1,5 @@
 import pandas as pd
-from forecasts import fmi_forecasts, aeris_forecasts, yr_forecasts, Accuweather_forecast, weather_channel_forecast, Meteomatics_forecast
+from forecasts import fmi_forecasts, aeris_forecasts, yr_forecasts, Accuweather_forecast, weather_channel_forecast, Meteomatics_forecast, Weatherkit_forecast
 import logging
 import datetime as dt
 
@@ -174,6 +174,34 @@ class Meteomatics:
                                                       'wind_speed_10m:ms': "winds_10", 'wind_dir_10m:d': "windd_10",
                                                       'validdate': 'datetime'})
         return new_forecasts
+
+
+#get WeatherKit Forecasts for multiple coordinates and adjust the layout
+class Forecasts_WeatherKit:
+
+    def export_forecasts(self, locations_list):
+        new_forecasts = pd.DataFrame()
+        metrics = ['humidity', 'windDirection', 'windSpeed','temperature']
+        for index, row in locations_list.iterrows():
+            lon = locations_list.loc[index, 'lon']
+            lat = locations_list.loc[index, 'lat']
+            id = locations_list.loc[index, 'id']
+            source = locations_list.loc[index, 'source']
+            try:
+                wk_forecast_i = Weatherkit_forecast().get_forecast(lat, lon, metrics)
+                wk_forecast_i['id'] = id
+                wk_forecast_i['source'] = source
+                wk_forecast_i['lat'] = lat
+                wk_forecast_i['lon'] = lon
+                new_forecasts = pd.concat([new_forecasts, wk_forecast_i])
+            except:
+                logging.error(f'{dt.datetime.utcnow()}: Forecast for {id} of {source} observation source was not loaded from the WeatherKit')
+        new_forecasts = new_forecasts.pivot(index=['id', 'lat', 'lon', 'source', 'collection_datetime', 'datetime', 'fc_leadtime'],
+                                            columns='metric_name', values='metric_value').reset_index()
+        new_forecasts = new_forecasts.rename(columns={"temperature": "temp_2", 'humidity': "rhum_2",
+                                                      "windSpeed": "winds_10","windDirection": "windd_10"})
+        return new_forecasts
+
 
 """
         for index, row in locations_list.iterrows():

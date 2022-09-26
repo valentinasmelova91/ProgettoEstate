@@ -6,7 +6,10 @@ import numpy as np
 import datetime
 import pytz
 import meteomatics.api as mmapi
+from time import time
 import os
+import jwt
+
 
 
 
@@ -349,6 +352,74 @@ class Meteomatics_forecast:
         dataframe['fc_leadtime'] = (dataframe['validdate'] -dataframe['collection_datetime']).dt.total_seconds() / 3600
         dataframe['fc_leadtime'] = dataframe['fc_leadtime'].apply(lambda x: int(round(x)))
         return dataframe
+
+
+#Forecasts from WeatherKit(Dark Sky)
+class Weatherkit_forecast:
+    def __init__(self):
+        self.team_id = 'WSFTBG7L56'
+        self.service_id = 'com.belotitskiy.test.weatherkit'
+        self.key_id = '8BZLPSGCAB'
+        self.key_path = 'AuthKey.pem'
+
+    def generate_token(self):
+        #expiry should represent the number of seconds the token should be expired, below it is set to be equal to 31days
+        expiry = 60*60*24*7*31
+        current_time = int(time())
+        expiry_time = current_time + expiry
+        payload = {
+            'iss': self.team_id,
+            'iat': current_time,
+            'exp': expiry_time,
+            'sub': self.service_id
+        }
+        headers = {
+            "kid": self.key_id, "id": f"{self.team_id}.{self.service_id}"
+                   }
+        with open(self.key_path, 'r') as key_file:
+            key = key_file.read()
+
+        token = jwt.encode(payload, key, algorithm='ES256', headers=headers)
+
+        return token
+
+    def get_data(self, lat, long):
+        datasets = ["forecastHourly"]
+        timezone = pytz.utc
+        hourlyEnd = datetime.datetime.utcnow() + datetime.timedelta(hours=49)
+        hourlyEnd = hourlyEnd.strftime('%Y-%m-%dT%H:%M:%SZ')
+        url = f"https://weatherkit.apple.com/api/v1/weather/en/{lat}/{long}"
+        token = self.generate_token()
+        headers = {"Authorization": f"Bearer {token}"}
+        params = { "timezone": timezone, "dataSets": ",".join(datasets), "hourlyEnd": hourlyEnd}
+        response = req.get(url, headers=headers, params=params)
+        return response.json()
+
+    def get_forecast(self, lat, long, parameters):
+        self.parameters = parameters
+        fc_period = []
+        fc_metric_name = []
+        fc_metric_value = []
+        data = self.get_data(lat, long)['forecastHourly']['hours']
+        for parameter in self.parameters:
+            fc_period_i = []
+            fc_metric_name_i = []
+            fc_metric_value_i = []
+            for datapoint in data:
+                fc_period_i.append(pd.to_datetime(datapoint['forecastStart']))
+                fc_metric_name_i.append(parameter)
+                fc_metric_value_i.append(datapoint[parameter])
+            fc_period = np.concatenate((fc_period, fc_period_i))
+            fc_metric_name = np.concatenate((fc_metric_name, fc_metric_name_i))
+            fc_metric_value = np.concatenate((fc_metric_value, fc_metric_value_i))
+        weatherkit_forecasts = list(zip(fc_period, fc_metric_name, fc_metric_value))
+        weatherkit_forecasts_dataframe = pd.DataFrame(weatherkit_forecasts, columns=['datetime', 'metric_name', 'metric_value'])
+        weatherkit_forecasts_dataframe['collection_datetime'] = datetime.datetime.utcnow().replace(tzinfo=pytz.UTC)
+        weatherkit_forecasts_dataframe['fc_leadtime'] = (weatherkit_forecasts_dataframe['datetime'] - weatherkit_forecasts_dataframe['collection_datetime']).dt.total_seconds() / 3600
+        weatherkit_forecasts_dataframe['fc_leadtime'] = weatherkit_forecasts_dataframe['fc_leadtime'].apply(lambda x: int(round(x)))
+        return weatherkit_forecasts_dataframe
+
+
 
 
 
